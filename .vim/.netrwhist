@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/lsy/qnx_bsp/bsp/prebuilt/usr'
+let g:netrw_dirhist_2='/home/lsy/qnx_bsp/bsp/prebuilt/usr/include'
+let g:netrw_dirhist_3='/home/lsy/practice/shell'
+let g:netrw_dirhist_4='/home/lsy/practice/makefile/makefile_test2_assignment_value'
+let g:netrw_dirhist_5='/home/lsy/practice'
