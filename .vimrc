@@ -61,9 +61,9 @@ set shiftwidth=4  " 自动缩进空白字符个数
 """"""""""""""""""""""""""""""""""""""""""""""""
 "显示肉眼不可见字符
 "显示换行为$符号
-set list
+"set list
 "table显示为>---
-set listchars=tab:>-
+"set listchars=tab:>-
 "高亮显示行尾空格
 highlight WhitespaceEOL ctermbg=red guibg=red
 match WhitespaceEOL /\s\+$/
@@ -278,17 +278,19 @@ let Tlist_Show_One_File = 1
 let Tlist_Exit_OnlyWindow = 1
 set tags=tags
 
-""""""""""""""""""配置WinManager""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""配置WinManager
 let g:winManagerWindowLayout='FileExplorer|TagList'
-"设置打开WinManager插件快捷键为F8"
-nmap <silent> <F8> :WMToggle<cr><C>wl
-"进入vim时自动打开插件
-let g:AutoOpenWinManager = 1
+"设置打开WinManager插件快捷键为F9"
+nmap <silent> <F9> :WMToggle<cr>
+"进入vim时自动打开插件"
+let g:AutoOpenWinManager = 0
 "设置winmanager的宽度，默认为25"
 let g:winManagerWidth = 30
+
 "自动退出Winmanager
-"autocmd bufenter * if ((winnr("$") == 3) && (exists("b:NERDTreeType")) && (b:NERDTreeType == "primary")) | qa | endif
-autocmd bufenter * if ((winnr("$") == 3) && (exists("b:NERDTreeType"))) | qa | endif
+autocmd bufenter * if (winnr("$") == 2 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary")  | qa | endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 """""""Powerline"""""""
@@ -338,8 +340,13 @@ let mapleader=","
 "Visual模式下执行命令，会对选中的特定区块进行注释/反注释
 "此外，其它的nerdcommenter命令可以在NORMAL模式下输入命令 :map 看到
 
-
+"自定义修改插件方法:
+"该插件/**/风格的注释中间没有空格，如果要修改格式，方法如下：
+"打开~/.vim/plugin/NERD_commenter.vim文件，
+"将里面的【/*】全部替换为【/* 】，
+"将里面的【*/】全部替换为【 */】。
 
 
 """""""""以下为新增加功能，未更新博客"""""""""""""""""""""""""
+"最后更新时间：2020-01-12
 
